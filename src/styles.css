@@ -1,0 +1,103 @@
+:root {
+    --candy: rgb(68, 223, 176);
+}
+
+body {
+    background: url(images/bg.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Bangers', cursive;
+
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#overlay {
+    z-index: 2;
+    height: 560px;
+    width: 560px;
+    background-color: var(--candy);
+    position: fixed;
+    opacity: 0.5;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid pink;
+}
+
+#final {
+    text-align: center;
+    color:white;
+    font-size: 60px;
+}
+
+.grid {
+    height: 560px;
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: lightpink;
+    border-style: outset;
+    cursor: -webkit-grab; cursor: grab;
+}
+
+.grid div {
+    height: 70px;
+    width: 70px;
+}
+
+.s-board {
+    background-color: var(--candy);
+    border-radius: 80px;
+    height: 200px;
+    width: 120px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+    margin-top: 10px;
+    padding-top: 30px;
+    font-size:25px;
+    border-style: outset;
+}
+
+#pause-button {
+    display:none;
+}
+
+#new-button {
+    display: none;
+}
+
+.btn {
+    margin-top: 20px;
+    height: 90px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--candy);
+    color: white;
+    border-radius: 100px;
+    font-size: 25px;
+    border-style: outset;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
+
+.btn:active {
+    background-color: lightgray;
+}
