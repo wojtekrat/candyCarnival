@@ -24,17 +24,17 @@ body {
 }
 
 #overlay {
-    position:absolute;
-    z-index: 2;
     height: 560px;
     width: 560px;
-    background-color: var(--candy);
-    opacity: 0.5;
     display: flex;
+    flex-wrap: wrap;
     border-radius: 20px;
+    background-color: lightpink;
+    border-style: outset;
     align-items: center;
     justify-content: center;
     border: 2px solid pink;
+    opacity: 0.95;
 }
 
 #final {
@@ -44,6 +44,7 @@ body {
 }
 
 .grid {
+    display: none;
     height: 560px;
     width: 560px;
     display: flex;

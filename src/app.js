@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
             square.style.backgroundImage = candyColors[randomColor]
             grid.appendChild(square)
             squares.push(square)
-        }
+            grid.style.display = 'none'
+            }
     }
     createBoard()
 
@@ -255,7 +256,7 @@ function startGame() {
     start.style.display = "none"
     pause.style.display = "flex"
     newG.style.display = "flex"
-    
+    grid.style.display = "flex"    
     window.setInterval(function(){
         checkRowForFive()
         checkColumnForFive()
@@ -274,9 +275,9 @@ function startGame() {
 
         if (moves == 0) {
             overlay.style.display = "flex"
-            overlay.style.opacity = 0.95
             final.innerHTML = "Out of moves! <br> Your result: " + score
             pause.style.display = "none"
+            grid.style.display = "none"
         }
         
     }, 100)
@@ -288,6 +289,8 @@ function pauseGame() {
     start.style.display = "flex"
     start.innerHTML = "<h3>Resume</h3>"
     pause.style.display = "none"
+    grid.style.display = 'none'
+    final.innerHTML = "Game is paused"
 }
 
 
@@ -296,9 +299,9 @@ function newGame() {
     pause.style.display = "none"
     start.style.display = "flex"
     start.innerHTML = "<h3>Start game</h3>"
+    grid.style.display = 'none'
     overlay.style.display = "flex"
-    overlay.style.opacity = 0.5
-    final.innerHTML = '' 
+    final.innerHTML = 'Start a new game' 
     for (i; i < 63; i++) {
         let randomColor = Math.floor(Math.random() * candyColors.length)
         squares[i].style.backgroundImage = candyColors[randomColor]
