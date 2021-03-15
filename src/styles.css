@@ -20,7 +20,7 @@ body {
     display: flex;
     width: 95%;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #overlay {
@@ -63,14 +63,14 @@ body {
 .s-board {
     background-color: var(--candy);
     border-radius: 80px;
-    height: 170px;
+    height: 150px;
     width: 100px;
     text-align: center;
     color: rgb(255, 255, 255);
     margin-right: 20px;
     margin-top: 10px;
     padding-top: 30px;
-    font-size:15px;
+    font-size:18px;
     border-style: outset;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .btn {
-    margin-top: 20px;
+    margin-top: 15px;
     height: 50px;
     width:100%;
     display: flex;
