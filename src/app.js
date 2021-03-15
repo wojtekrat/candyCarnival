@@ -257,7 +257,7 @@ function startGame() {
     pause.style.display = "flex"
     newG.style.display = "flex"
     grid.style.display = "flex"    
-    window.setInterval(function(){
+    interval = window.setInterval(function(){
         checkRowForFive()
         checkColumnForFive()
         checkRowForFour()
@@ -291,6 +291,7 @@ function pauseGame() {
     pause.style.display = "none"
     grid.style.display = 'none'
     final.innerHTML = "Game is paused"
+    clearInterval(interval)
 }
 
 
@@ -301,8 +302,8 @@ function newGame() {
     start.innerHTML = "<h3>Start game</h3>"
     grid.style.display = 'none'
     overlay.style.display = "flex"
-    final.innerHTML = 'Start a new game' 
-    for (i; i < 63; i++) {
+    final.innerHTML = "Start a new game" 
+    for (i = 0; i < width*width; i++) {
         let randomColor = Math.floor(Math.random() * candyColors.length)
         squares[i].style.backgroundImage = candyColors[randomColor]
     }
@@ -310,6 +311,7 @@ function newGame() {
     moves = 20
     movesDisplay.innerHTML = 20
     scoreDisplay.innerHTML = 0
+    clearInterval(interval)
 }
 
 
