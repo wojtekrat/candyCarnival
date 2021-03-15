@@ -296,7 +296,6 @@ function pauseGame() {
 
 
 function newGame() {
-    newG.style.display = "none"
     pause.style.display = "none"
     start.style.display = "flex"
     start.innerHTML = "<h3>Start game</h3>"

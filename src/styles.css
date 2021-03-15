@@ -78,14 +78,14 @@ body {
     display:none;
 }
 
-#new-button {
-    display: none;
+#menu {
+    display: flex;
 }
 
 .btn {
     margin-top: 15px;
     height: 50px;
-    width:100%;
+    width:50%;
     display: flex;
     justify-content: center;
     background-color: var(--candy);
